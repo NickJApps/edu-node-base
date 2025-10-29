@@ -1,15 +1,13 @@
-export default class User {
+import Person from "./Person.js";
 
-    constructor(userName, age){
-        this.userName = userName;
-        this.age = age;
+export default class User extends Person{
+    
+    constructor(personName, personAge, id){
+        super(personName, personAge);
+        this.id = id;
     }
 
-    getUserName() {
-        return this.userName;
-    }
-
-    getAge(){
-        return this.age;
+    getUserId(){
+        return this.id;
     }
 }
