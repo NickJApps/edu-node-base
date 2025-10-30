@@ -2,6 +2,7 @@ import { CColor } from '@miroyar/ccolor';
 import User from './render/models/User.js';
 import dotenv from 'dotenv';
 import Math from "./render/models/Math.js";
+import chalk from 'chalk';
 
 // СColor import and test 
 const cColor = new CColor();
@@ -26,4 +27,4 @@ console.log(process.env.DB_HOST);  // → localhost
 console.log(cColor.print("Math class", "BG"));
 
 const math = new Math();
-console.log(math.sum(2, 2));
+console.log(chalk.red('>>> ') + math.sum(2, 2));
